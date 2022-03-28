@@ -13,14 +13,14 @@ public class APITest {
 	public static void setup( ) {
 		RestAssured.baseURI = "http://localhost:8001/tasks-backend";
 	}
-	/* @Test	
+	@Test	
 	public void deveRetornarTarefas() {
 		RestAssured.given()		
 		.when()
 			.get("/todo")
 		.then()
 			.statusCode(200);
-	} */
+	}
 	
 	@Test	
 	public void deveAdicionarTarefasComSucesso() {
@@ -33,7 +33,7 @@ public class APITest {
 			.statusCode(201);
 	}
 	
-	/* @Test	
+	@Test	
 	public void naoDeveAdicionarTarefasInvalida() {
 		RestAssured.given()
 			.body("{\"task\": \"Teste via API\", \"dueDate\": \"2010-12-30\"}")
@@ -43,5 +43,5 @@ public class APITest {
 		.then()
 			.statusCode(400)
 			.body("message", CoreMatchers.is("Due date must not be in past"));
-	} */
+	}
 }
